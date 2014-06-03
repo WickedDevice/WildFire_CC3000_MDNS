@@ -43,14 +43,14 @@ License (MIT license):
 #ifndef CC3000_MDNS_H
 #define CC3000_MDNS_H
 
-#include "Adafruit_CC3000.h"
+#include "WildFire_CC3000.h"
 #include "utility/socket.h"
 
 class MDNSResponder {
 public:
   MDNSResponder();
   ~MDNSResponder();
-  bool begin(const char* domain, Adafruit_CC3000& cc3000, uint32_t ttlSeconds = 3600);
+  bool begin(const char* domain, WildFire_CC3000& cc3000, uint32_t ttlSeconds = 3600);
   void update();
 
 private:

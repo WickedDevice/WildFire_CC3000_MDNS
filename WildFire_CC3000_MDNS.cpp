@@ -29,7 +29,7 @@ License (MIT license):
 // - DNS request and response: http://www.ietf.org/rfc/rfc1035.txt
 // - Multicast DNS: http://www.ietf.org/rfc/rfc6762.txt
 
-#include "CC3000_MDNS.h"
+#include "WildFire_CC3000_MDNS.h"
 
 #define HEADER_SIZE 12
 #define QDCOUNT_OFFSET 4
@@ -70,7 +70,7 @@ MDNSResponder::~MDNSResponder() {
   }
 }
 
-bool MDNSResponder::begin(const char* domain, Adafruit_CC3000& cc3000, uint32_t ttlSeconds)
+bool MDNSResponder::begin(const char* domain, WildFire_CC3000& cc3000, uint32_t ttlSeconds)
 { 
   // Construct DNS request/response fully qualified domain name of form:
   // <domain length>, <domain characters>, 5, "local"
